@@ -74,14 +74,14 @@ body {
 	width:100%;
 }
 ::-moz-selection  {
-	color: #fff;
+	color: #fff !important;
 	text-shadow:none;
-	background:#2B2E31;
+	background:#fff !important;
 }
 ::selection {
 	color: #fff;
 	text-shadow:none;
-	background:#2B2E31;
+	background:#fff;
 }
 *,
 *:after,
@@ -200,26 +200,114 @@ input {
 }
 
 /* HEADER SECTION */
+
 #h {
-	background: url(../img/header-3.jpg) no-repeat center top;
+	/*background: url(../img/bg1.jpg) no-repeat center top;*/
 	padding-top: 5px;
 	background-attachment: relative;
 	background-position: center center;
+	background-repeat: no-repeat;
 	min-height: 700px;
 	width: 100%;
 	
-    -webkit-background-size: 100%;
+    -webkit-background-size: 100% !important;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
+    -webkit-background-size: cover !important;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
+
+    animation-name:bg-animate;
+    animation-duration: 60s;
+    animation-iteration-count:infinite;
+
+    -webkit-animation-name:bg-animate;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count:infinite;
+
 }
 
+@keyframes bg-animate{
+	0%{
+		background: url(../img/bg3.jpg) no-repeat center top;
+		background-attachment: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100% !important;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+
+	    -webkit-background-size: cover !important;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+	25%{
+		background: url(../img/bg4.jpg) no-repeat center top;
+		background-attachment: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100% !important;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+
+	    -webkit-background-size: cover !important;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+		50%{
+		background: url(../img/bg1.jpg) no-repeat center top;
+		background-attachment: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100% !important;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+
+	    -webkit-background-size: cover !important;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+		75%{
+		background: url(../img/bg2.jpg) no-repeat center top;
+		background-attachment: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100% !important;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+
+	    -webkit-background-size: cover !important;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+		100%{
+		background: url(../img/bg1.jpg) no-repeat center top;
+		background-attachment: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100% !important;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+
+	    -webkit-background-size: cover !important;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+}
 #h .logo {
 	margin-top: 30px;
 	margin-left: 40px;
@@ -383,4 +471,32 @@ input {
 }
 .white-text{
 	color:white;
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.responsive-navbar{
+	background-color: transparent;
+}
+.white-text,.white-text > li > a{
+	color:white !important;
 }
